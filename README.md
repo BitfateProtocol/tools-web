@@ -1,0 +1,1 @@
+# DECENTGEN BEP20 Token Generator dApp

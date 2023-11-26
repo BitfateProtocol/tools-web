@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Rubik", sans-serif;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+label:has(+ input[required]):after,
+label[data-required="true"]:after {
+  @apply text-destructive ml-1;
+  content: "*";
+}
